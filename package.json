@@ -1,0 +1,21 @@
+{
+  "name": "terranova",
+  "version": "1.0.0",
+  "description": "Pagina web para hacer pedidos o domicilios de un punto de venta de comidas rapidas a traves de la api de whatsapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "terranova"
+  },
+  "keywords": [
+    "comidas",
+    "rapidas",
+    "y",
+    "pedidos"
+  ],
+  "author": "Ricardo cortes hurtado",
+  "license": "MIT"
+}
