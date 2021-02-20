@@ -24,7 +24,9 @@ body{
     box-sizing: border-box;
 }
 .container{
-    padding: 43px 0 0 0;  
+    padding: 43px 0 0 0; 
+    /* overflow: hidden; */
+    margin-bottom: 20px;/*quietar luego con segurida es provisonal*/
 }
 
 
@@ -129,50 +131,126 @@ body{
  /* ------------------------------------------------
     ESTILOS  A LAS CATEGORIAS
 --------------------------------------------------- */
-header{
-    /* border:1px solid red; */
-}
 
-.categoryBox{
- 
-}
-.categoryBox .categoryTittle{
-    margin: 0%;
-    font-size: 22px;
-    font-weight: 510;
-    padding-left:30px; 
-}
+    .categoryBox .categoryTittle{
+        margin: 0%;
+        font-size: 22px;
+        font-weight: 510;
+        padding-left:30px; 
+    }
 
-.categoryBox .listCategories{
-   display: flex; 
-   outline: 0;
-   flex-wrap: nowrap;
-   margin-top: 5px;
-   padding: 0 30px 0 30px;
-   overflow-y: hidden; 
-   scroll-behavior: smooth;
-}
-.listCategories::-webkit-scrollbar {
-    display: none;
-  }
-  
+    .categoryBox .listCategories{
+    display: flex; 
+    outline: 0;
+    flex-wrap: nowrap;
+    margin-top: 5px;
+    padding-left:30px;
+    padding-right: 30px;
+    overflow-y: hidden; 
+    scroll-behavior: smooth;
+    }
 
-.categoryBox .listCategories .btn-list-item{
-   font-size: 14px;
-   color: var(--white);
-   background: var(--midDark);
-   border: 0;
-   border-radius: 43px;
-   outline: 0;
-   padding: 7px 16px;
-   width: auto;
-   height: 35px;
-   margin-right: 10px;
- }
+    .listCategories::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .categoryBox .listCategories .btn-list-item{
+    font-size: 1rem;
+    color: var(--white);
+    background: var(--midDark);
+    border: 0;
+    border-radius: 43px;
+    outline: 0;
+    padding: 7px 16px;
+    width: auto;
+    height: 35px;
+    margin-right: 10px;
+    }
 
- .categoryBox .listCategories .btn-list-item.active{
-    background: var(--lightOrange);
-    color: var(--dark);
-  }
+    .categoryBox .listCategories .btn-list-item.active{
+        background: var(--lightOrange);
+        color: var(--dark);
+    }
+    
 
+ /* ------------------------------------------------
+    ESTILOS  LAS CARDS DE PRODUCTOS
+--------------------------------------------------- */
 
+    .productSection{
+        padding:0 30px 0 30px; 
+    }
+
+    /* titulo categoria seleccionada en la seccion de producto */
+    .productSection .productTittleCat {
+        font-size: 18px;
+    }
+
+    .productSection .card-product{
+        display: flex;
+        background: var(--midDark);
+        border-radius: 13px;
+        margin-top: 16px;
+        width: 354px;
+    }
+
+    .productSection .card-product::f{
+
+    }
+    .card-tittle,.card-text,.card-pay{
+        margin:0;
+        margin-left: 15px;
+    }
+    /* Titulo del producto */
+    .productSection .card-product .card-body .card-tittle{
+        font-size: 16px;
+        font-weight: 500;
+        margin-top:6px;
+    
+    }
+    /* Texto en amarillo en el producto */
+    .productSection .card-product .card-body .card-text{
+        font-size: 11px;
+        font-weight: 500;
+        color:var(--lightOrange)
+    }
+    .productSection .card-product .card-body .card-pay{
+        color:var(--orange);
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+    /* Botones */
+    .productSection .card-product .card-body .card-buttons{
+        display: flex;
+        justify-content: flex-end;
+        /* margin-top: 10px; */
+        align-items: center;
+    }
+
+    .productSection .card-product .card-body .card-buttons button{
+        width: 25px;
+        height: 25px;  
+        font-size: 16px;
+        background: transparent;
+        outline: 0;
+        border: 0;
+        border-radius: 50%;
+    }
+    .productSection .card-product .card-body .card-buttons .subs{
+        border: 0.5px solid var(--lightOrange); 
+        color: var(--lightOrange); 
+        
+    }
+    .productSection .card-product .card-body .card-buttons .add{
+        background :var(--lightOrange); 
+        
+    }
+    .productSection .card-product .card-body .card-buttons .quantity{
+        margin: 0 10px 0 10px;  
+        font-size: 12px;
+    }
+
+/* ------------------------------------------------
+    ESTILOS  el pie de pagina
+--------------------------------------------------- */
