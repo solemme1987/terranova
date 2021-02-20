@@ -24,14 +24,17 @@ body{
     box-sizing: border-box;
 }
 .container{
-    padding: 43px 30px 0 30px;
-    overflow: hidden;
+    padding: 43px 0 0 0;  
 }
 
 
 /* ------------------------------------------------
    STILOSA LA BARRA DE BUSQUEDA YSUS BOTONES
 --------------------------------------------------- */
+    header{
+     padding:0px 30px; 
+    }
+
     header .searchBar{
         display: flex;
         justify-content: space-between;
@@ -68,8 +71,9 @@ body{
     }
 
     .tittleAndLogoBox .tittleBox .tittle{
-    font-size: 24px;
-    font-weight: 600;
+        font-size: 24px;
+        font-weight: 600;
+        /* height: 36px; */
     }
 
 
@@ -130,21 +134,28 @@ header{
 }
 
 .categoryBox{
-    /* border:1px solid white;
-    padding: 0px; */
+ 
 }
 .categoryBox .categoryTittle{
     margin: 0%;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 510;
+    padding-left:30px; 
 }
 
 .categoryBox .listCategories{
    display: flex; 
    outline: 0;
-   flex-wrap: nowrap; 
+   flex-wrap: nowrap;
    margin-top: 5px;
+   padding: 0 30px 0 30px;
+   overflow-y: hidden; 
+   scroll-behavior: smooth;
 }
+.listCategories::-webkit-scrollbar {
+    display: none;
+  }
+  
 
 .categoryBox .listCategories .btn-list-item{
    font-size: 14px;
