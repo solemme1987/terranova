@@ -201,6 +201,10 @@ body{
         margin:0;
         margin-left: 15px;
     }
+    .productSection .card-product .card-body .card-header{
+        width: 220px;
+        
+    }
     /* Titulo del producto */
     .productSection .card-product .card-body .card-tittle{
         font-size: 16px;
@@ -250,6 +254,8 @@ body{
         margin: 0 10px 0 10px;  
         font-size: 12px;
     }
+
+
 
 /* ------------------------------------------------
     ESTILOS  el pie de pagina
