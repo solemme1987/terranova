@@ -188,15 +188,13 @@ body{
 
     .productSection .card-product{
         display: flex;
-        background: var(--midDark);
+        background: linear-gradient(0deg, var(--midDark), transparent) ;
         border-radius: 13px;
         margin-top: 16px;
         width: 354px;
     }
 
-    .productSection .card-product::f{
-
-    }
+    
     .card-tittle,.card-text,.card-pay{
         margin:0;
         margin-left: 15px;
