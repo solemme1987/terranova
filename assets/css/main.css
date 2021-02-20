@@ -22,11 +22,10 @@ body{
     background: var(--dark);
     margin:0;
     box-sizing: border-box;
+    
 }
 .container{
-    padding: 43px 0 0 0; 
-    /* overflow: hidden; */
-    margin-bottom: 20px;/*quietar luego con segurida es provisonal*/
+    padding: 43px 0 0 0;
 }
 
 
@@ -254,7 +253,66 @@ body{
     }
 
 
-
 /* ------------------------------------------------
-    ESTILOS  el pie de pagina
+    ESTILOS  PIE DE PAGINA (MENU BAR)
 --------------------------------------------------- */
+footer.menu-bar{
+  position: relative;
+  align-items: center;
+  background: var(--midDark);  
+  bottom: 0;
+  display: flex;
+  justify-content: space-between; 
+  height: 55px;
+  margin-top: 16px;
+  padding: 30px 30px 0 30px; 
+
+  /* ESta linea me hace la figura de poligon en el menu bar */
+  clip-path: polygon(50% 14%, 100% 35%, 100% 100%, 0 100%, 0% 35%);
+  z-index: -1;
+
+}
+
+
+.menu-bar i{
+
+    width: 45px;
+    height: 47px;
+    font-size: 35px;
+    color: var(--white);
+    outline: 0;
+    background:transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.menu-bar i.car-button{
+    /* position: absolute; */
+    /* background: var(--orange);
+    padding:15px 15px;
+    border-radius:50px ;
+    text-align: center;
+    align-items: center; */
+   
+    
+}
+
+ .car-button-container{
+    position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: -10px;
+  z-index: 1;
+} 
+.car-button-container i.car-button{
+   
+    /* background: var(--orange); */
+    /* padding:5px 10px; */
+    border-radius:50px ;
+    font-size: 35px;
+   
+ 
+}
