@@ -22,10 +22,10 @@ body{
     background: var(--dark);
     margin:0;
     box-sizing: border-box;
-    
 }
 .container{
     padding: 43px 0 0 0;
+    position: relative;
 }
 
 
@@ -152,7 +152,7 @@ body{
     .listCategories::-webkit-scrollbar {
         display: none;
     }
-    
+
     .categoryBox .listCategories .btn-list-item{
     font-size: 1rem;
     color: var(--white);
@@ -170,7 +170,7 @@ body{
         background: var(--lightOrange);
         color: var(--dark);
     }
-    
+
 
  /* ------------------------------------------------
     ESTILOS  LAS CARDS DE PRODUCTOS
@@ -190,17 +190,20 @@ body{
         background: linear-gradient(0deg, var(--midDark), transparent) ;
         border-radius: 13px;
         margin-top: 16px;
-        width: 354px;
+        width: 100%;
     }
 
-    
+    .productSection .card-product .card-body{
+        position:relative;
+        width: 100%;
+        padding-right:12px ;
+    }
     .card-tittle,.card-text,.card-pay{
         margin:0;
         margin-left: 15px;
     }
     .productSection .card-product .card-body .card-header{
-        width: 220px;
-        
+        width: 100%;
     }
     /* Titulo del producto */
     .productSection .card-product .card-body .card-tittle{
@@ -225,8 +228,13 @@ body{
     .productSection .card-product .card-body .card-buttons{
         display: flex;
         justify-content: flex-end;
-        /* margin-top: 10px; */
         align-items: center;
+        padding-right: 12px;
+        position: absolute;
+        width: 85%;
+        right: 0;
+        bottom: 0;
+        height: 60px;
     }
 
     .productSection .card-product .card-body .card-buttons button{
@@ -257,25 +265,12 @@ body{
     ESTILOS  PIE DE PAGINA (MENU BAR)
 --------------------------------------------------- */
 footer.menu-bar{
-  position: relative;
-  align-items: center;
-  background: var(--midDark);  
-  bottom: 0;
-  display: flex;
-  justify-content: space-between; 
-  height: 55px;
-  margin-top: 16px;
-  padding: 30px 30px 0 30px; 
-
-  /* ESta linea me hace la figura de poligon en el menu bar */
-  clip-path: polygon(50% 14%, 100% 35%, 100% 100%, 0 100%, 0% 35%);
-  z-index: -1;
-
+    position: relative;
+    bottom: 0;
 }
 
-
-.menu-bar i{
-
+/* Doy formato a los botnes home y config */
+footer.menu-bar .inner-menu-bar i{
     width: 45px;
     height: 47px;
     font-size: 35px;
@@ -285,34 +280,60 @@ footer.menu-bar{
     border: 0;
     margin: 0;
     padding: 0;
-    
 }
 
-.menu-bar i.car-button{
-    /* position: absolute; */
-    /* background: var(--orange);
-    padding:15px 15px;
+footer .car-button-container{
+    /* aporte jls */
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    align-items: center;
+    background: var(--orange);
     border-radius:50px ;
-    text-align: center;
-    align-items: center; */
-   
-    
+    display: flex;
+    font-size: 30px;
+    height: 60px;
+    justify-content: center;
+    width: 60px;
+
 }
 
- .car-button-container{
-    position: relative;
+footer .car-button-container span.quantity{
+    background: var(--lightOrange);
+    border:1px solid var(--white);
+    border-radius:  10px;
+    color:var(--dark);
+    font-size:12px;
+    margin-right: -7px;
+    margin-top: -35px;
+    padding:0 5px;
+    position: absolute;
+    right: 0;
+}
+footer .inner-menu-bar{
+  position: relative;
+  align-items: center;
+  background: var(--midDark);
   bottom: 0;
-  left: 0;
-  right: 0;
-  top: -10px;
-  z-index: 1;
-} 
-.car-button-container i.car-button{
-   
-    /* background: var(--orange); */
-    /* padding:5px 10px; */
-    border-radius:50px ;
-    font-size: 35px;
-   
- 
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+  margin-top: 16px;
+  padding: 30px 30px 0 30px;
+  /* ESta linea me hace la figura de poligon en el menu bar */
+  clip-path: polygon(50% 14%, 100% 35%, 100% 100%, 0 100%, 0% 35%);
+  z-index: -1;
+
+}
+
+
+
+
+@media (min-width:414px){
+
+
+
+
 }
