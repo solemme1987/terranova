@@ -47,11 +47,34 @@ body{
         height: 28px;
         border: 1px solid var(--white);
         border-radius: 7px ;
-        background: transparent;
+        /* este color lo colo solo para poder tapr el input debajo
+        por que si no le colocab trasnparente */
+        background: var(--dark);
         color: var(--white);
         outline: 0;
     }
 
+    header .searchBar .searchInput{
+        background: transparent;
+        border-radius: 7px ;
+        height: 20px;
+        margin-right: 52px;
+        outline: 0;
+        position:absolute;
+        right: 0;
+        transition: 0.2s ease-in-out;
+        width: 0;
+        z-index: -1;/* Coloco el input debajo del boton */
+    }
+
+    header .searchBar .searchInput.active{
+        border:1px solid var(--white);
+        color: var(--white);
+        height: 24px;
+        margin-right: 62px;
+        padding-left: 10px;
+        width: 63%;
+    }
 /* ------------------------------------------------
     ESTILOS AL TITULO DE PANTALLA PRINCIPAL Y LOGO
 --------------------------------------------------- */
@@ -130,7 +153,11 @@ body{
  /* ------------------------------------------------
     ESTILOS  A LAS CATEGORIAS
 --------------------------------------------------- */
-
+/* Esta se puede activar es par hacer la prueba del escroll en los productos */
+/* .categoryBox {
+     padding-bottom: 10px;
+    box-sizing: border-box;
+} */
     .categoryBox .categoryTittle{
         margin: 0%;
         font-size: 22px;
@@ -178,14 +205,17 @@ body{
 
     .productSection{
         padding:0 30px 0 30px;
-        height: 467px;
-        overflow: scroll;
-        scroll-behavior: smooth;
+        /* Estas dos uultimas lineas son de prueba para el scrol de los productos
+        se pueden activar para ver la prueba */
+        /* height: 467px; */
+        /* overflow: scroll;
+        scroll-behavior: smooth; */
     }
 
-    .productSection::-webkit-scrollbar {
+    /* Esta tambien acompaña la prueba del scroll en productos */
+    /* .productSection::-webkit-scrollbar {
         display: none;
-    }
+    } */
 
     /* titulo categoria seleccionada en la seccion de producto */
     .productSection .productTittleCat {
