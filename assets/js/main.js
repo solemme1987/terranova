@@ -5,5 +5,5 @@ const searchInput = document.querySelector('.searchInput');
 btnSearch.addEventListener('click', ()=>{
  
    searchInput.classList.toggle('active')
-   searchInput.focus();
+   searchInput.select();
 })
