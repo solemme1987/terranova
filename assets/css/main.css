@@ -42,38 +42,38 @@ body{
     }
 
     header .searchBar .btn-search-bar{
-
         width: 29px;
         height: 28px;
         border: 1px solid var(--white);
         border-radius: 7px ;
-        /* este color lo colo solo para poder tapr el input debajo
-        por que si no le colocab trasnparente */
-        background: var(--dark);
+        background: transparent;
         color: var(--white);
         outline: 0;
     }
 
+    header .searchBar .inputContainer{
+        width: 100%;
+        text-align: right;
+        margin-top: 0;
+        display: flex;
+        padding: 0 5px;
+    }
+
     header .searchBar .searchInput{
         background: transparent;
+        border:0;
         border-radius: 7px ;
-        height: 20px;
-        margin-right: 52px;
+        height: 24px;
         outline: 0;
-        position:absolute;
-        right: 0;
         transition: 0.2s ease-in-out;
         width: 0;
-        z-index: -1;/* Coloco el input debajo del boton */
     }
 
     header .searchBar .searchInput.active{
         border:1px solid var(--white);
         color: var(--white);
-        height: 24px;
-        margin-right: 63px;
         padding-left: 10px;
-        width: 63%;
+        flex-grow: 1;
     }
 /* ------------------------------------------------
     ESTILOS AL TITULO DE PANTALLA PRINCIPAL Y LOGO
