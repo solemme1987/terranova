@@ -13,8 +13,6 @@
     --redWine: #711f24;
 }
 
-
-
 body{
 
     font-family: 'Poppins', sans-serif;
@@ -23,12 +21,131 @@ body{
     margin:0;
     box-sizing: border-box;
 }
+
 .container{
     padding: 43px 0 0 0;
     position: relative;
 }
+/* ------------------------------------------------
+   STILOS al menú oculto el side bar
+--------------------------------------------------- */
+aside.side-bar{
+ position: fixed;
+ background: var(--midDark);
+ z-index: 5;
+ width: 0px;
+ height: 100vh;
+ top:0;
+ right: 0;
+ transition: 0.3s ease-in-out;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
 
+aside.side-bar.active{
+    width: 230px;
+}
 
+aside .side-bar-title{
+    font-size: 22px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 8px;
+}
+
+aside .option-pay-container{
+    padding: 0 10px 0 0;
+}
+
+aside .option-pay-container .pay-tittle,.theme-tittle{
+    font-size: 16px;
+}
+
+/* --------------------------------
+   STILOS el switch del tema
+----------------------------------*/
+/* .modo {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    justify-content: center; */
+    /* transition: 0.3s ease-in-out; */
+/* } */
+
+/* .modo i {
+    font-size: 1.5rem;
+}
+
+.modo i:nth-of-type(odd) {
+    color: white;
+}
+
+.switchs {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    margin: 20px 20px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px #999;
+    transition: 0.2s ease-in-out;
+}
+
+.ligth {
+    color: black;
+    background-color: #DCDCDE;
+}
+
+.dark {
+    background-color: #030F31;
+} */
+/* --------------------------------
+   STILOS a LAS TARJETAS DE PAGO
+----------------------------------*/
+aside .option-pay-container .card-pay {
+    border:1px solid var(--white);
+    height: 90px;
+    border-radius: 11px;
+    display: flex;
+    margin-top: 15px;
+}
+
+aside .option-pay-container .card-pay .card-pay-img{
+    width: 50%;
+    font-size: 11px;
+    line-height: 0;
+    padding-top: 3px;
+    border-right: 1px solid var(--white);
+}
+
+aside .option-pay-container .card-pay .card-pay-form{
+    width: 50%;
+    /* background: blue;s */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-pay input[type="radio" i]{
+    width: 30px;
+    height: 30px;
+}
+
+/* Div par el boton cerrar */
+aside .close-container{
+    width: 100%;
+    position: relative;
+    text-align: right;
+    font-size: 40px;
+}
+
+/*  boton cerrar */
+aside .close-container .btn-close-side-bar{
+  margin-right: 30px;
+  margin-bottom: 13px;
+}
 /* ------------------------------------------------
    STILOSA LA BARRA DE BUSQUEDA YSUS BOTONES
 --------------------------------------------------- */
@@ -317,6 +434,8 @@ body{
         border: 0;
         margin: 0;
         padding: 0;
+        position: relative;
+        z-index:1;
     }
 
     footer .car-button-container{
@@ -334,6 +453,7 @@ body{
         height: 60px;
         justify-content: center;
         width: 60px;
+        z-index: 1;
 
     }
 
@@ -349,20 +469,20 @@ body{
         position: absolute;
         right: 0;
     }
-    footer .inner-menu-bar{
-    position: relative;
-    align-items: center;
-    background: var(--midDark);
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    height: 55px;
-    margin-top: 16px;
-    padding: 30px 30px 0 30px;
-    /* ESta linea me hace la figura de poligon en el menu bar */
-    clip-path: polygon(50% 14%, 100% 35%, 100% 100%, 0 100%, 0% 35%);
-    z-index: -1;
 
+    footer .inner-menu-bar{
+        position: relative;
+        align-items: center;
+        background: var(--midDark);
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        height: 55px;
+        margin-top: 16px;
+        padding: 30px 30px 0 30px;
+        /* ESta linea me hace la figura de poligon en el menu bar */
+        clip-path: polygon(50% 14%, 100% 35%, 100% 100%, 0 100%, 0% 35%);
+        /* z-index: -1; */
     }
 
 
