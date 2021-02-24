@@ -26,7 +26,7 @@ body{
     padding: 43px 0 0 0;
     position: relative;
     background: var(--dark);
-    /* height: 100vh; */
+    min-height:100vh;
 }
 /* ------------------------------------------------
    STILOS al menú oculto el side bar
@@ -330,28 +330,31 @@ aside .close-container .btn-close-side-bar{
 
     .productSection{
         padding:0 30px 0 30px;
+
         /* Estas dos uultimas lineas son de prueba para el scrol de los productos
         se pueden activar para ver la prueba */
-        /* height: 467px; */
-        /* overflow: scroll;
-        scroll-behavior: smooth; */
+
+       height: 489px; 
+        overflow: scroll;
+        scroll-behavior: smooth; 
     }
 
     /* Esta tambien acompaña la prueba del scroll en productos */
-    /* .productSection::-webkit-scrollbar {
+    .productSection::-webkit-scrollbar {
         display: none;
-    } */
+    }
 
     /* titulo categoria seleccionada en la seccion de producto */
     .productSection .productTittleCat {
         font-size: 18px;
+        background: var(--dark);
     }
 
     .productSection .card-product{
         display: flex;
         background: linear-gradient(0deg, var(--midDark), transparent) ;
         border-radius: 13px;
-        margin-top: 16px;
+        margin-top: 16px; 
         width: 100%;
     }
 
@@ -440,13 +443,15 @@ aside .close-container .btn-close-side-bar{
         font-size: 12px;
     }
 
-
 /* ------------------------------------------------
     ESTILOS  PIE DE PAGINA (MENU BAR)
 --------------------------------------------------- */
     footer.menu-bar{
         position: relative;
-        bottom: 0;
+        bottom:0 ;
+        width: 100%;
+        margin-bottom: 0;
+        /* background:red;s */
     }
 
     /* Doy formato a los botnes home y config */
