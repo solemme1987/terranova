@@ -19,6 +19,7 @@ body{
     font-family: 'Poppins', sans-serif;
     margin:0;
     box-sizing: border-box;
+
 }
 
 .container{
@@ -27,6 +28,8 @@ body{
     position: relative;
     background: var(--dark);
     min-height:100vh;
+    display: flex;
+    flex-direction: column;
 }
 /* ------------------------------------------------
    STILOS al menú oculto el side bar
@@ -64,45 +67,6 @@ aside .option-pay-container .pay-tittle,.theme-tittle{
     font-size: 16px;
 }
 
-/* --------------------------------
-   STILOS el switch del tema
-----------------------------------*/
-/* .modo {
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    justify-content: center; */
-    /* transition: 0.3s ease-in-out; */
-/* } */
-
-/* .modo i {
-    font-size: 1.5rem;
-}
-
-.modo i:nth-of-type(odd) {
-    color: white;
-}
-
-.switchs {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 60px;
-    height: 30px;
-    margin: 20px 20px;
-    border-radius: 20px;
-    box-shadow: 3px 3px 5px #999;
-    transition: 0.2s ease-in-out;
-}
-
-.ligth {
-    color: black;
-    background-color: #DCDCDE;
-}
-
-.dark {
-    background-color: #030F31;
-} */
 /* --------------------------------
    STILOS a LAS TARJETAS DE PAGO
 ----------------------------------*/
@@ -270,15 +234,11 @@ aside .close-container .btn-close-side-bar{
  /* ------------------------------------------------
     ESTILOS  A LAS CATEGORIAS
 --------------------------------------------------- */
-/* Esta se puede activar es par hacer la prueba del escroll en los productos */
-/* .categoryBox {
-     padding-bottom: 10px;
-    box-sizing: border-box;
-} */
     .categoryBox .categoryTittle{
-        margin: 0%;
+        margin: 0;
         font-size: 22px;
         font-weight: 510;
+        padding: 0;
         padding-left:30px;
     }
 
@@ -319,6 +279,7 @@ aside .close-container .btn-close-side-bar{
         background: var(--lightOrange);
         color: var(--dark);
     }
+
     .categoryBox .listCategories .btn-list-item.active:hover{
         background: var(--lightOrangeHover);
         color: var(--white);
@@ -329,33 +290,43 @@ aside .close-container .btn-close-side-bar{
 --------------------------------------------------- */
 
     .productSection{
+
         padding:0 30px 0 30px;
-
-        /* Estas dos uultimas lineas son de prueba para el scrol de los productos
+        /* Estas dos uultimas lineas son de
+        prueba para el scrol de los productos
         se pueden activar para ver la prueba */
-
-       height: 489px; 
+        height: 489px;
         overflow: scroll;
-        scroll-behavior: smooth; 
+        scroll-behavior: smooth;
+        /*aqui aplico d2 propiedades 1 es flex grow 1 y flexgrw basic.
+        son par que me aplique tod el ancho yel alto que pueda el elemento,
+        el contenedor principal está en flex */
+        flex:1 auto;
+        margin-bottom: 16px;
     }
 
     /* Esta tambien acompaña la prueba del scroll en productos */
     .productSection::-webkit-scrollbar {
-        display: none;
+      display: none;
     }
 
     /* titulo categoria seleccionada en la seccion de producto */
-    .productSection .productTittleCat {
+    .productTittleCat {
         font-size: 18px;
         background: var(--dark);
+        margin: 18px 0 5px 30px;
     }
 
     .productSection .card-product{
         display: flex;
         background: linear-gradient(0deg, var(--midDark), transparent) ;
         border-radius: 13px;
-        margin-top: 16px; 
+        margin-top: 16px;
         width: 100%;
+    }
+
+    .productSection .card-product:first-child{
+       margin-top: 0px;
     }
 
     .productSection .card-product .card-body{
@@ -363,10 +334,12 @@ aside .close-container .btn-close-side-bar{
         width: 100%;
         padding-right:12px ;
     }
+
     .card-tittle,.card-text,.card-pay{
         margin:0;
         margin-left: 15px;
     }
+
     .productSection .card-product .card-body .card-header{
         width: 100%;
     }
@@ -383,22 +356,26 @@ aside .close-container .btn-close-side-bar{
         text-decoration: none;
         color: var(--white);
     }
+
     .productSection .card-product .card-body .card-tittle a:visited{
         text-decoration: none;
         color: var(--white);
     }
+
     /* Texto en amarillo en el producto */
     .productSection .card-product .card-body .card-text{
         font-size: 11px;
         font-weight: 500;
         color:var(--lightOrange)
     }
+
     .productSection .card-product .card-body .card-pay{
         color:var(--orange);
         font-size: 16px;
         font-weight: 700;
         margin-top: 5px;
     }
+
     /* Botones */
     .productSection .card-product .card-body .card-buttons{
         display: flex;
@@ -467,8 +444,8 @@ aside .close-container .btn-close-side-bar{
         padding: 0;
         position: relative;
         transition: 0.1s ease-in-out;
-        /* z-index:1; */
     }
+
     footer .inner-menu-bar i:hover{
         font-size: 45px;
     }
@@ -476,10 +453,9 @@ aside .close-container .btn-close-side-bar{
     footer .car-button-container{
         /* aporte jls */
         position: absolute;
-        top: 25%;
+        top: 33%;
         left: 50%;
         transform: translate(-50%, -50%);
-
         align-items: center;
         background: var(--orange);
         border-radius:50px ;
@@ -509,10 +485,10 @@ aside .close-container .btn-close-side-bar{
         position: relative;
         align-items: center;
         background: var(--midDark);
-        bottom: 0;
+        /* bottom: 0; */
         display: flex;
         justify-content: space-between;
-        height: 55px;
+        height: 49px;/* Tambien podria ser de 55px */
         margin-top: 16px;
         padding: 30px 30px 0 30px;
         /* ESta linea me hace la figura de poligon en el menu bar */
