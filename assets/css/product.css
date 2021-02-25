@@ -120,16 +120,16 @@ header{
 /* ------------------------------------------------
     ESTILOS  PARA el titulo de perzonalizacion
 --------------------------------------------------*/
-.config-title-box{
+  .config-title-box, .config-option-tittle{
     border-bottom:1px solid var(--orange);
     padding: 10px 0 10px 30px;
-}
- .config-title-box h3{
+  }
+ .config-title-box h3,.config-option-tittle h3{
     font-size: 18px;
     line-height: 0;
     margin-bottom: 13px;
 }
-.config-title-box p{
+.config-title-box p,.config-option-tittle p{
     font-size: 11px;
     line-height: 0;
     color: var(--lightOrange);
@@ -151,7 +151,7 @@ header{
     font-size: 15px;
 }
 
-/* ------------------------------------------------
+/* ------------------------------------------------Salsa Rosada
     ESTILOS  PARA EL CHECKBOX DE LAS OPCIONES
 --------------------------------------------------*/
 .config-option .checkbox input[type="checkbox"]{
@@ -188,9 +188,12 @@ header{
 }
 
 /* ------------------------------------------------
-    ESTILOS  PARA LOS TITULOS DE CONFIGURACION
+    ESTILOS  PARA LaS BEBIDAS
 --------------------------------------------------*/
-
+.price-drink{
+    color:var(--lightOrange);
+    font-weight: 600;
+}
 
 /* .config-container .config-option.tittle{
     padding: 10px 0 10px 30px;
