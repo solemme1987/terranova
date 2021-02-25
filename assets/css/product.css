@@ -1,3 +1,160 @@
 .container{
     background: var(--orange);
 }
+
+header{
+    margin-bottom: 103px;
+}
+/* ------------------------------------------------
+    ESTILOS  PAR LA SESION DE INFO PRODUCTO imagen
+--------------------------------------------------*/
+.productInfo{
+    position: relative;
+    background:var(--dark);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    flex:1 auto;
+}
+
+.productInfo .img-info-container{
+   position: absolute;
+   top:2%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.productInfo .img-info-container img{
+    width: 197px;
+    height: 188px;
+    border-radius: 30px;
+    box-shadow: 11px 15px 33px 11px rgba(0, 0, 0, 0.25);
+}
+
+.productInfo .product-description{
+  margin-top: 117px;
+  padding: 0 51px;
+  text-align: center;
+}
+
+.productInfo .product-description h1{
+    font-size: 20px;
+    font-weight: 700;
+    color:var(--white);
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.productInfo .product-description p{
+  margin:0;
+  font-size: 11px;
+  color: var(--lightOrange);
+  line-height: 12px;
+  text-align: center;
+}
+
+/* ------------------------------------------------
+    ESTILOS  PAR LA SESION DE INFO PRODUCTO Precio
+    y cantidad
+--------------------------------------------------*/
+.price-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.price-container .price{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.price-container-body{
+    display: flex;
+    width: 238px;
+    justify-content: space-between;
+    margin-top: 16px;
+    align-items: center;
+    border: 0.031rem solid gray;
+    border-radius: 43px;
+    padding-left: 15px;
+    left:50%;
+}
+
+.card-buttons {
+    background: var(--midDark);
+    width: 122px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 43px;
+    padding: 0 5px;
+}
+
+ .card-buttons button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    outline: 0;
+    border: 0;
+    border-radius: 50%;
+    transition: 0.1s ease-in-out;
+    font-size: 19px;
+    align-items: center;
+}
+
+ .card-buttons .subs {
+    border: 0.5px solid var(--lightOrange);
+    color: var(--lightOrange);
+}
+
+ .card-buttons .quantity {
+    margin: 0 10px 0 10px;
+    font-size: 17px;
+}
+
+.card-buttons .add {
+    background: var(--lightOrange);
+}
+
+/* ------------------------------------------------
+    ESTILOS  PARA el titulo de perzonalizacion
+--------------------------------------------------*/
+.config-title-box{
+    border-bottom:1px solid var(--orange);
+    width: 100%;
+    padding: 10px 0 10px 30px;
+}
+ .config-title-box h3{
+    font-size: 18px;
+    line-height: 0;
+    margin-bottom: 13px;
+}
+.config-title-box p{
+    font-size: 11px;
+    line-height: 0;
+    color: var(--lightOrange);
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------
+    ESTILOS  PAR EL FOOTER
+--------------------------------------------------*/
+footer{
+    background: var(--dark);
+
+}
+@media (min-width:412px){
+
+    .productInfo .product-description h1{
+        font-size: 22px;
+    }
+
+
+}
