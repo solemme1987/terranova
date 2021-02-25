@@ -120,15 +120,17 @@ header{
 /* ------------------------------------------------
     ESTILOS  PARA el titulo de perzonalizacion
 --------------------------------------------------*/
-  .config-title-box, .config-option-tittle{
+.config-title-box, .config-option-tittle{
     border-bottom:1px solid var(--orange);
     padding: 10px 0 10px 30px;
-  }
- .config-title-box h3,.config-option-tittle h3{
+}
+
+.config-title-box h3,.config-option-tittle h3{
     font-size: 18px;
     line-height: 0;
     margin-bottom: 13px;
 }
+
 .config-title-box p,.config-option-tittle p{
     font-size: 11px;
     line-height: 0;
@@ -138,6 +140,14 @@ header{
 /* ------------------------------------------------------------
     ESTILOS  PARA LOS TEXTOS DE LASOPCIONES DE PERSONALIZACION
 ---------------------------------------------------------------*/
+.config-container{
+    height: 400px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+.config-container::-webkit-scrollbar {
+ display: none;
+}
 
 .config-container .config-option{
     padding: 10px 30px 10px 30px;
@@ -188,13 +198,49 @@ header{
 }
 
 /* ------------------------------------------------
-    ESTILOS  PARA LaS BEBIDAS
+    ESTILOS  PARA LOS CONTROLES DE LAS BEBIDAS
+    Y ADICIONES
 --------------------------------------------------*/
-.price-drink{
+.config-option .price-drink{
     color:var(--lightOrange);
     font-weight: 600;
 }
 
+.config-option .checkbox-drink{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.config-option .checkbox-drink button {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    background: transparent;
+    outline: 0;
+    border: 0;
+    border-radius: 50%;
+    transition: 0.1s ease-in-out;
+    font-size: 19px;
+    align-items: center;
+}
+
+.config-option .checkbox-drink .add {
+    background: var(--lightOrange);
+}
+.config-option .checkbox-drink .subs {
+    border: 1px solid var(--lightOrange);
+    color: var(--white);
+}
+
+.config-option .checkbox-drink .quantity {
+    margin: 0 10px 0 10px;
+    font-size: 17px;
+}
+
+
+/* .checkbox-drink{
+
+} */
 /* .config-container .config-option.tittle{
     padding: 10px 0 10px 30px;
 } */
