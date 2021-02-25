@@ -122,7 +122,6 @@ header{
 --------------------------------------------------*/
 .config-title-box{
     border-bottom:1px solid var(--orange);
-    width: 100%;
     padding: 10px 0 10px 30px;
 }
  .config-title-box h3{
@@ -136,12 +135,66 @@ header{
     color: var(--lightOrange);
 }
 
+/* ------------------------------------------------------------
+    ESTILOS  PARA LOS TEXTOS DE LASOPCIONES DE PERSONALIZACION
+---------------------------------------------------------------*/
+
+.config-container .config-option{
+    padding: 10px 30px 10px 30px;
+    border-bottom:1px solid var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.config-container .config-option span{
+    font-size: 15px;
+}
+
+/* ------------------------------------------------
+    ESTILOS  PARA EL CHECKBOX DE LAS OPCIONES
+--------------------------------------------------*/
+.config-option .checkbox input[type="checkbox"]{
+    visibility: hidden;
+}
+
+.config-option .checkbox{
+    background: transparent;
+    width: 20px;
+    height: 19px;
+    border-radius: 4px;
+    position: relative;
+    border: 1px solid var(--lightOrange);
+}
+
+.config-option .checkbox label{
+    background:transparent;
+    width: 20px;
+    height: 19px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all .5s ease;
+}
+.config-option .checkbox input[type=checkbox]:checked + label {
+    background:var(--orange);
+    width: 15px;
+    height: 15px;
+    top: 2px;
+    left: 3px; 
+}
+
+/* ------------------------------------------------
+    ESTILOS  PARA LOS TITULOS DE CONFIGURACION
+--------------------------------------------------*/
 
 
-
-
-
-
+/* .config-container .config-option.tittle{
+    padding: 10px 0 10px 30px;
+} */
 
 /* ------------------------------------------------
     ESTILOS  PAR EL FOOTER
