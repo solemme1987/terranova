@@ -145,8 +145,9 @@ header{
     overflow: scroll;
     scroll-behavior: smooth;
 }
+
 .config-container::-webkit-scrollbar {
- display: none;
+   display: none;
 }
 
 .config-container .config-option{
