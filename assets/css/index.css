@@ -28,6 +28,9 @@
 .social-box a:visited{
   color:var(--midDark)
 }
+.social-box a:active{
+  color:var(--midDark)
+}
 
 .logo-index-container {
   width: 200px;
@@ -89,6 +92,8 @@
 
 .btn-box{
   margin-bottom: 35px;
+  position: fixed;
+  bottom: 0;
 }
 .btn-index{
   border:0;
@@ -118,7 +123,7 @@
     margin-top: 80px;
     width: 250px;
     height: 250px;
-    
+
   }
   /* .logo-index-container {
     margin-top: 80px;
